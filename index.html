@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaviya Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.jpeg" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Hello, I'm <span>Kaviya Priya Mathiyazhagan</span></h1>
+                <p>Data Analyst | ML Enthusiast</p>
+            </div>
+        </div>
+
+        <!-- ---------------- about ---------------- -->
+        <div id='about'>
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/user.jpeg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title"> About Me </h1>
+                        <p>I'm Kaviya Priya, a dedicated and detail-oriented Data Analyst with a passion for
+                            transforming raw data into actionable insights. With a strong foundation in statistical
+                            analysis and data visualization, I excel at identifying trends and patterns that drive
+                            informed decision-making. Proficient in tools such as Python, R, SQL, and Tableau, I am
+                            adept at cleaning, analyzing, and interpreting complex datasets. My goal is to leverage data
+                            to solve real-world problems and contribute to the success of dynamic organizations. Let's
+                            connect and explore how I can add value to your team!</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="skills">
+                            <div class="skills-category">
+                                <h3>Programming & Development</h3>
+                                <div class="skill-tags">
+                                    <span>Python</span>
+                                    <span>Express JS</span>
+                                    <span>REST APIs</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-category">
+                                <h3>Databases & Engineering</h3>
+                                <div class="skill-tags">
+                                    <span>MySQL</span>
+                                    <span>PostgreSQL</span>
+                                    <span>MongoDB</span>
+                                    <span>Redis</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-category">
+                                <h3>Data Processing & NLP</h3>
+                                <div class="skill-tags">
+                                    <span>spaCy</span>
+                                    <span>Entity Resolution</span>
+                                    <span>Knowledge Graphs (Google and Wiki)</span>
+                                    <span>Web Scraping</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-category">
+                                <h3>Visualization</h3>
+                                <div class="skill-tags">
+                                    <span>Tableau</span>
+                                    <span>Power BI</span>
+                                    <span>Excel</span>
+                                    <span>Matplotlib</span>
+                                    <span>Seaborn</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-category">
+                                <h3>Tools & Platforms</h3>
+                                <div class="skill-tags">
+                                    <span>GitHub</span>
+                                    <span>Jira</span>
+                                    <span>VS Code</span>
+                                    <span>Amundsen (Basics)</span>
+                                    <span>Zoho</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-contents" id="experience">
+                            <div class="experience-item">
+                                <h3>Data Analyst <span> | Gravity AI Technologies Pvt Ltd</span></h3>
+                                <p class="exp-date">July 2025 – Current · Coimbatore, India</p>
+                            </div>
+                            <div class="experience-item">
+                                <h3>Data Analyst Intern <span> | Gravity AI Technologies Pvt Ltd</span></h3>
+                                <p class="exp-date">Oct 2024 – Jul 2025 · Coimbatore, India</p>
+                            </div>
+                            <div class="experience-item">
+                                <h3>Graduate Engineer Trainee <span> | Gravity AI Technologies Pvt Ltd</span></h3>
+                                <p class="exp-date">Aug 2024 – Sep 2024 · Coimbatore, India</p>
+                            </div>
+                            <div class="experience-item">
+                                <h3>Graduate Innovation Engineer Trainee <span> | Forge Innovation and Ventures</span>
+                                </h3>
+                                <p class="exp-date">Jan 2024 – Jul 2024 · Coimbatore, India</p>
+                            </div>
+                        </div>
+
+                        <div class="tab-contents" id="education">
+                            <div class="education-item">
+                                <h3>B.Tech in Artificial Intelligence & Data Science</h3>
+                                <p class="edu-institute">Kumaraguru College of Technology, Coimbatore</p>
+                                <p class="edu-date">2021 – 2025</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ---------------- projects ---------------- -->
+        <div id="projects">
+            <div class="container">
+                <h1 class="sub-title">Projects</h1>
+
+                <!-- Filter Tabs -->
+                <div class="project-filters">
+                    <p class="filter-btn active-filter" onclick="filterProjects('all')">All Projects</p>
+                    <p class="filter-btn" onclick="filterProjects('ml')">ML Projects</p>
+                    <p class="filter-btn" onclick="filterProjects('dashboard')">Dashboards</p>
+                </div>
+
+                <!-- Project Cards -->
+                <div class="project-grid">
+                    <!-- Example Project Card -->
+                    <div class="project-card ml">
+                        <img src="images/background.jpg" alt="Project Thumbnail">
+                        <div class="project-info">
+                            <h3>Customer Churn Prediction</h3>
+                            <p>Built a machine learning model to predict customer churn with 85% accuracy.</p>
+                            <a href="https://github.com/yourusername/churn" target="_blank">🔗 Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card dashboard">
+                        <img src="images/background.jpg" alt="Dashboard Thumbnail">
+                        <div class="project-info">
+                            <h3>Sales Dashboard</h3>
+                            <p>Interactive Power BI dashboard to track sales performance and KPIs.</p>
+                            <a href="https://link-to-dashboard.com" target="_blank">🔗 View Project</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card ml">
+                        <img src="images/background.jpg" alt="ML Project">
+                        <div class="project-info">
+                            <h3>Sentiment Analysis</h3>
+                            <p>Performed NLP sentiment analysis using Python and spaCy on product reviews.</p>
+                            <a href="https://github.com/yourusername/sentiment" target="_blank">🔗 Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card dashboard">
+                        <img src="images/background.jpg" alt="Dashboard">
+                        <div class="project-info">
+                            <h3>HR Analytics Dashboard</h3>
+                            <p>Power BI dashboard analyzing employee performance and attrition.</p>
+                            <a href="https://link-to-dashboard.com" target="_blank">🔗 View Project</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card ml">
+                        <img src="images/background.jpg" alt="ML">
+                        <div class="project-info">
+                            <h3>Stock Price Prediction</h3>
+                            <p>Time series forecasting model using LSTM to predict stock trends.</p>
+                            <a href="https://github.com/yourusername/stock-lstm" target="_blank">🔗 Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ---------------- certificates ---------------- -->
+        <section id="certificates">
+            <div class="container">
+                <h2 class="sub-title">Certificates</h2>
+
+                <!-- Certificates Grid -->
+                <div class="certificates-grid">
+                    <div class="certificate-card">
+                        <img src="images/iiitk.png" alt="Python Certificate">
+                        <div class="card-content">
+                            <h3>Participated in Summit'23@IIITK</h3>
+                            <p>Issued by: IIIT - Kottayam, Kerala</p>
+                            <a href="https://drive.google.com/file/d/1XTT1GYVWiB6n9A80cGK2Snd40tDhLU2c/view?usp=drive_link"
+                                target="_blank" class="btn">View Certificate</a>
+                        </div>
+                    </div>
+                    <div class="certificate-card">
+                        <img src="images/nlp.png" alt="NLP Certificate">
+                        <div class="card-content">
+                            <h3>Natural Language Processing</h3>
+                            <p>Issued by: DeepLearning.AI & Coursera</p>
+                            <a href="https://drive.google.com/file/d/1nmwGOTMNkepKt0wfzWNEOhlPsds3x9yk/view?usp=sharing"
+                                target="_blank" class="btn">View Certificate</a>
+                        </div>
+                    </div>
+                    <div class="certificate-card">
+                        <img src="images/ibm-data-analyst.png" alt="Certificate">
+                        <div class="card-content">
+                            <h3>Data Analyst</h3>
+                            <p>Issued by: IBM & Coursera</p>
+                            <a href="https://drive.google.com/file/d/1bOV_OIWWDO7IRUlGcB2oSd5H_RSilBuF/view?usp=drive_link"
+                                target="_blank" class="btn">View Certificate</a>
+                        </div>
+                    </div>
+                    <div class="certificate-card">
+                        <img src="images/forage.png" alt="Certificate">
+                        <div class="card-content">
+                            <h3>Data Analytics and Visualization Job Simulation</h3>
+                            <p>Issued by: Forage in association with Accenture</p>
+                            <a href="https://drive.google.com/file/d/1iMK9U7_k3t6dS-jLKWQRFPFBUQERgFbe/view?usp=drive_link"
+                                target="_blank" class="btn">View Certificate</a>
+                        </div>
+                    </div>
+                    <div class="certificate-card">
+                        <img src="images/ai-ml-aicte.png" alt="Certificate">
+                        <div class="card-content">
+                            <h3>AI & ML - Virtual Internship</h3>
+                            <p>Issued by: AICTE supported by AWS academy</p>
+                            <a href="https://drive.google.com/file/d/1ZLW-7tXZ6xAmGh9ykQ7y0UEFDGv68042/view?usp=drive_link"
+                                target="_blank" class="btn">View Certificate</a>
+                        </div>
+                    </div>
+                    <div class="certificate-card">
+                        <img src="images/Fullstack.png" alt="Fullstack Certificate">
+                        <div class="card-content">
+                            <h3>Fullstack Development with React</h3>
+                            <p>Issued by: KSI in association with Rampex Technologies LLP</p>
+                            <a href="https://drive.google.com/file/d/10q75lZ8EK-Wu5_mxjeAW0pjGAy4EOppw/view?usp=drive_link"
+                                target="_blank" class="btn">View Certificate</a>
+                        </div>
+                    </div>
+                    <div class="certificate-card">
+                        <img src="images/sustainathon.png" alt="Hackathon Certificate">
+                        <div class="card-content">
+                            <h3>Participated in 36 hours Sustainathon</h3>
+                            <p>Issued by: Kumaraguru Institutions & Hyperverge</p>
+                            <a href="https://drive.google.com/file/d/1v5-FWV5bt7oTdh3Wul7En06tPvR27Dx6/view?usp=drive_link"
+                                target="_blank" class="btn">View Certificate</a>
+                        </div>
+                    </div>
+                    <div class="certificate-card">
+                        <img src="images/GIET.png" alt="SQL Certificate">
+                        <div class="card-content">
+                            <h3>Protosem - Graduation Innovation Engineer Trainee</h3>
+                            <p>Issued by: Forge Innovation and Ventures</p>
+                            <a href="https://drive.google.com/file/d/1tWtre_s_qXWnk-s-oofsMTPUTV113_q0/view?usp=drive_link"
+                                target=" _blank" class="btn">View Certificate</a>
+                        </div>
+                    </div>
+                    <div class="certificate-card">
+                        <img src="images/rl.jpg" alt="RL Certificate">
+                        <div class="card-content">
+                            <h3>Reinforcement Learning with Python</h3>
+                            <p>Issued by: Great Learning</p>
+                            <a href="https://drive.google.com/file/d/1L59DIIf9Z5jtErAphA8N1jHOTaFig0bb/view?usp=drive_link"
+                                target="_blank" class="btn">View Certificate</a>
+                        </div>
+                    </div>
+                    <div class="certificate-card">
+                        <img src="images/nss.png" alt="Certificate">
+                        <div class="card-content">
+                            <h3>NSS Volunteer and attended 7 days special camp</h3>
+                            <p>Issued by: Government of India - Ministry of Youth Affairs and Sports</p>
+                            <a href="https://drive.google.com/file/d/1BAUf8RoUhpu8l5u_cKSV2MTOfKx9eNVI/view?usp=drive_link"
+                                target="_blank" class="btn">View Certificate</a>
+                        </div>
+                    </div>
+        </section>
+
+        <!-- ---------------- contact ---------------- -->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Left Side -->
+                    <div class="contact-left">
+                        <h2 class="sub-title">Contact Me</h2>
+                        <p>Thank you for visiting my portfolio! Feel free to connect with me 😊</p>
+                        <div class="social-icons">
+                            <a href="mailto:kaviyapriyamathiyazhagan@gmail.com" target="_blank"><i
+                                    class="fa-solid fa-envelope"></i></a>
+                            <a href="https://github.com/KaviyapriyaMathi" target="_blank"><i
+                                    class="fa-brands fa-github"></i></a>
+                            <a href="https://in.linkedin.com/in/kaviya-priya-mathiyazhagan-666820225" target="_blank"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Right Side -->
+                    <div class="contact-right">
+                        <form action="https://formspree.io/f/yourformid" method="POST">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <input type="text" name="phone" placeholder="Phone (Optional)">
+                            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ---------------- footer ---------------- -->
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 KaviyaM. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+        <!-- ---------------- scripts ---------------- -->
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname) {
+                for (tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for (tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+        <script>
+            function filterProjects(category) {
+                let buttons = document.querySelectorAll(".filter-btn");
+                let projects = document.querySelectorAll(".project-card");
+
+                // update active filter style
+                buttons.forEach(btn => btn.classList.remove("active-filter"));
+                event.currentTarget.classList.add("active-filter");
+
+                // show/hide projects
+                projects.forEach(project => {
+                    if (category === "all") {
+                        project.style.display = "block";
+                    } else {
+                        if (project.classList.contains(category)) {
+                            project.style.display = "block";
+                        } else {
+                            project.style.display = "none";
+                        }
+                    }
+                });
+            }
+
+            // Certificates Filtering
+            function filterCertificates(category) {
+                let cards = document.querySelectorAll('.certificate-card');
+                let buttons = document.querySelectorAll('.filter-btn');
+
+                buttons.forEach(btn => btn.classList.remove('active'));
+                event.currentTarget.classList.add('active');
+
+                cards.forEach(card => {
+                    if (category === 'all' || card.classList.contains(category)) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+        </script>
+    </div>
+</body>
+
+</html>
