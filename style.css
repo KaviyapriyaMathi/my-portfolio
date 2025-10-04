@@ -76,7 +76,7 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 span {
-    color: #6172bb;
+    color: #51aaee;
 }
 
 /* ----------------about-------------- */
@@ -128,7 +128,7 @@ nav ul li a:hover::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #0a27a9;
+    background: #51aaee;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -146,7 +146,7 @@ nav ul li a:hover::after {
 
 .tab-contents ul li span {
     font-size: 18px;
-    color: #0a27a9;
+    color: #51aaee;
 }
 
 .tab-contents {
@@ -157,44 +157,76 @@ nav ul li a:hover::after {
     display: block;
 }
 
-.skills-category {
-    margin-bottom: 25px;
+.skills-overlay-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
 }
 
-.skills-category h3 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #6172bb;
+.overlay-card {
+  position: relative;
+  background-color: #111;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+.overlay-card:hover {
+  transform: scale(1.02);
+  border-color: #51aaee;
 }
 
-.skill-tags span {
-    background: #1a1a1a;
-    border: 1px solid;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 14px;
-    color: #fff;
-    transition: 0.3s;
+.overlay-card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(81,170,238,0.1);
+  transform: rotate(45deg) scale(0);
+  transition: transform 0.5s ease;
 }
 
-.skill-tags span:hover {
-    background: #566fde;
-    transform: scale(1.05);
+.overlay-card:hover::after {
+  transform: rotate(45deg) scale(1);
 }
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.card-icon {
+  font-size: 24px;
+}
+
+.card-header h3 {
+  font-size: 20px;
+  color: #51aaee;
+}
+
+.card-body p {
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+
+/* ---------------- Experience & Education Section -------------- */
 
 
 .experience-item {
     background: #111;
     padding: 20px;
     margin-bottom: 20px;
-    border-left: 4px solid #566fde;
+    border-left: 4px solid #51aaee;
     border-radius: 8px;
     transition: transform 0.3s ease, background 0.3s ease;
 }
@@ -211,7 +243,7 @@ nav ul li a:hover::after {
 }
 
 .experience-item h3 span {
-    color: #566fde;
+    color: #51aaee;
     font-weight: normal;
     font-size: 18px;
 }
@@ -225,7 +257,7 @@ nav ul li a:hover::after {
     background: #111;
     padding: 20px;
     margin-bottom: 20px;
-    border-left: 4px solid #566fde;
+    border-left: 4px solid #51aaee;
     border-radius: 8px;
     transition: transform 0.3s ease, background 0.3s ease;
 }
@@ -243,7 +275,7 @@ nav ul li a:hover::after {
 
 .edu-institute {
     font-size: 16px;
-    color: #566fde;
+    color: #51aaee;
     margin-bottom: 5px;
 }
 
@@ -278,7 +310,7 @@ nav ul li a:hover::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #0a27a9;
+    background: #51aaee;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -333,7 +365,7 @@ nav ul li a:hover::after {
 
 .project-info a {
     font-size: 14px;
-    color: #0a27a9;
+    color: #51aaee;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
@@ -396,7 +428,7 @@ nav ul li a:hover::after {
 .certificate-card .btn {
     display: inline-block;
     padding: 8px 16px;
-    background: #0a27a9;
+    background: #51aaee;
     color: #fff;
     border-radius: 20px;
     font-size: 14px;
@@ -405,96 +437,96 @@ nav ul li a:hover::after {
 }
 
 .certificate-card .btn:hover {
-    background: #0a27a9;
+    background: #51aaee;
 }
 
 /* Contact Section */
 #contact {
-  padding: 80px 0;
-  color: #fff;
+    padding: 80px 0;
+    color: #fff;
 }
 
 .contact-left {
-  flex-basis: 35%;
+    flex-basis: 35%;
 }
 
 .contact-left p {
-  margin: 10px 0;
-  font-size: 16px;
-  color: #ddd;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #ddd;
 }
 
 .contact-left a {
-  color: #70e976;
-  text-decoration: none;
+    color: #70e976;
+    text-decoration: none;
 }
 
 .contact-right {
-  flex-basis: 60%;
+    flex-basis: 60%;
 }
 
 .contact-right form {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-right input,
 .contact-right textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  outline: none;
-  background: #1a1a1a;
-  color: #fff;
-  border-radius: 8px;
-  font-size: 14px;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    background: #1a1a1a;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 14px;
 }
 
 .contact-right .btn {
-  padding: 12px;
-  background: #6172bb;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  color: #fff;
-  font-size: 16px;
-  transition: background 0.3s;
+    padding: 12px;
+    background: #51aaee;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    transition: background 0.3s;
 }
 
 .contact-right .btn:hover {
-  background: #70e976;
-  color: #000;
+    background: #70e976;
+    color: #000;
 }
 
 
 /* Social Icons */
 .social-icons {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .social-icons a {
-  text-decoration: none;
-  font-size: 28px;
-  margin-right: 20px;
-  color: #fff;
-  transition: color 0.3s, transform 0.3s;
+    text-decoration: none;
+    font-size: 28px;
+    margin-right: 20px;
+    color: #fff;
+    transition: color 0.3s, transform 0.3s;
 }
 
 .social-icons a:hover {
-  color: #566fde;
-  transform: scale(1.2);
+    color: #51aaee;
+    transform: scale(1.2);
 }
 
 /* ---------------- footer ---------------- */
 footer {
-  background: #111;
-  padding: 20px 0;
-  text-align: center;
-  color: #fff;
+    background: #111;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
 }
 
 footer p {
-  margin: 0;
-  font-size: 14px;
+    margin: 0;
+    font-size: 14px;
 }
