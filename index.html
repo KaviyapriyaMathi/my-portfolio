@@ -200,52 +200,25 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div><br> <br>
 
         <!-- ---------------- certificates ---------------- -->
         <section id="certificates">
             <div class="container">
-                <h2 class="sub-title">Certificates</h2>
+                <h1 class="sub-title">Certificates</h1>
+
+                <!-- Filter Tabs -->
+                <div class="certificate-filters">
+                    <p class="filter-btn-cert active-filter-cert" onclick="filterCertificates('all')">All</p>
+                    <p class="filter-btn-cert" onclick="filterCertificates('ml')">ML</p>
+                    <p class="filter-btn-cert" onclick="filterCertificates('data-science')">Data Science</p>
+                    <p class="filter-btn-cert" onclick="filterCertificates('others')">Others</p>
+                </div>
 
                 <!-- Certificates Grid -->
                 <div class="certificates-grid">
-                    <div class="certificate-card">
-                        <img src="images/iiitk.png" alt="Python Certificate">
-                        <div class="card-content">
-                            <h3>Participated in Summit'23@IIITK</h3>
-                            <p>Issued by: IIIT - Kottayam, Kerala</p>
-                            <a href="https://drive.google.com/file/d/1XTT1GYVWiB6n9A80cGK2Snd40tDhLU2c/view?usp=drive_link"
-                                target="_blank" class="btn">View Certificate</a>
-                        </div>
-                    </div>
-                    <div class="certificate-card">
-                        <img src="images/nlp.png" alt="NLP Certificate">
-                        <div class="card-content">
-                            <h3>Natural Language Processing</h3>
-                            <p>Issued by: DeepLearning.AI & Coursera</p>
-                            <a href="https://drive.google.com/file/d/1nmwGOTMNkepKt0wfzWNEOhlPsds3x9yk/view?usp=sharing"
-                                target="_blank" class="btn">View Certificate</a>
-                        </div>
-                    </div>
-                    <div class="certificate-card">
-                        <img src="images/ibm-data-analyst.png" alt="Certificate">
-                        <div class="card-content">
-                            <h3>Data Analyst</h3>
-                            <p>Issued by: IBM & Coursera</p>
-                            <a href="https://drive.google.com/file/d/1bOV_OIWWDO7IRUlGcB2oSd5H_RSilBuF/view?usp=drive_link"
-                                target="_blank" class="btn">View Certificate</a>
-                        </div>
-                    </div>
-                    <div class="certificate-card">
-                        <img src="images/forage.png" alt="Certificate">
-                        <div class="card-content">
-                            <h3>Data Analytics and Visualization Job Simulation</h3>
-                            <p>Issued by: Forage in association with Accenture</p>
-                            <a href="https://drive.google.com/file/d/1iMK9U7_k3t6dS-jLKWQRFPFBUQERgFbe/view?usp=drive_link"
-                                target="_blank" class="btn">View Certificate</a>
-                        </div>
-                    </div>
-                    <div class="certificate-card">
+                    <!-- ML Category -->
+                    <div class="certificate-card ml">
                         <img src="images/ai-ml-aicte.png" alt="Certificate">
                         <div class="card-content">
                             <h3>AI & ML - Virtual Internship</h3>
@@ -254,34 +227,8 @@
                                 target="_blank" class="btn">View Certificate</a>
                         </div>
                     </div>
-                    <div class="certificate-card">
-                        <img src="images/Fullstack.png" alt="Fullstack Certificate">
-                        <div class="card-content">
-                            <h3>Fullstack Development with React</h3>
-                            <p>Issued by: KSI in association with Rampex Technologies LLP</p>
-                            <a href="https://drive.google.com/file/d/10q75lZ8EK-Wu5_mxjeAW0pjGAy4EOppw/view?usp=drive_link"
-                                target="_blank" class="btn">View Certificate</a>
-                        </div>
-                    </div>
-                    <div class="certificate-card">
-                        <img src="images/sustainathon.png" alt="Hackathon Certificate">
-                        <div class="card-content">
-                            <h3>Participated in 36 hours Sustainathon</h3>
-                            <p>Issued by: Kumaraguru Institutions & Hyperverge</p>
-                            <a href="https://drive.google.com/file/d/1v5-FWV5bt7oTdh3Wul7En06tPvR27Dx6/view?usp=drive_link"
-                                target="_blank" class="btn">View Certificate</a>
-                        </div>
-                    </div>
-                    <div class="certificate-card">
-                        <img src="images/GIET.png" alt="SQL Certificate">
-                        <div class="card-content">
-                            <h3>Protosem - Graduation Innovation Engineer Trainee</h3>
-                            <p>Issued by: Forge Innovation and Ventures</p>
-                            <a href="https://drive.google.com/file/d/1tWtre_s_qXWnk-s-oofsMTPUTV113_q0/view?usp=drive_link"
-                                target=" _blank" class="btn">View Certificate</a>
-                        </div>
-                    </div>
-                    <div class="certificate-card">
+
+                    <div class="certificate-card ml">
                         <img src="images/rl.jpg" alt="RL Certificate">
                         <div class="card-content">
                             <h3>Reinforcement Learning with Python</h3>
@@ -290,7 +237,80 @@
                                 target="_blank" class="btn">View Certificate</a>
                         </div>
                     </div>
-                    <div class="certificate-card">
+
+                    <div class="certificate-card ml">
+                        <img src="images/nlp.png" alt="NLP Certificate">
+                        <div class="card-content">
+                            <h3>Natural Language Processing</h3>
+                            <p>Issued by: DeepLearning.AI & Coursera</p>
+                            <a href="https://drive.google.com/file/d/1nmwGOTMNkepKt0wfzWNEOhlPsds3x9yk/view?usp=sharing"
+                                target="_blank" class="btn">View Certificate</a>
+                        </div>
+                    </div>
+
+                    <!-- Data Science Category -->
+                    <div class="certificate-card data-science">
+                        <img src="images/ibm-data-analyst.png" alt="Certificate">
+                        <div class="card-content">
+                            <h3>Data Analyst</h3>
+                            <p>Issued by: IBM & Coursera</p>
+                            <a href="https://drive.google.com/file/d/1bOV_OIWWDO7IRUlGcB2oSd5H_RSilBuF/view?usp=drive_link"
+                                target="_blank" class="btn">View Certificate</a>
+                        </div>
+                    </div>
+
+                    <div class="certificate-card data-science">
+                        <img src="images/forage.png" alt="Certificate">
+                        <div class="card-content">
+                            <h3>Data Analytics and Visualization Job Simulation</h3>
+                            <p>Issued by: Forage in association with Accenture</p>
+                            <a href="https://drive.google.com/file/d/1iMK9U7_k3t6dS-jLKWQRFPFBUQERgFbe/view?usp=drive_link"
+                                target="_blank" class="btn">View Certificate</a>
+                        </div>
+                    </div>
+
+                    <!-- Others Category -->
+                    <div class="certificate-card others">
+                        <img src="images/iiitk.png" alt="Python Certificate">
+                        <div class="card-content">
+                            <h3>Participated in Summit'23@IIITK</h3>
+                            <p>Issued by: IIIT - Kottayam, Kerala</p>
+                            <a href="https://drive.google.com/file/d/1XTT1GYVWiB6n9A80cGK2Snd40tDhLU2c/view?usp=drive_link"
+                                target="_blank" class="btn">View Certificate</a>
+                        </div>
+                    </div>
+
+                    <div class="certificate-card others">
+                        <img src="images/sustainathon.png" alt="Hackathon Certificate">
+                        <div class="card-content">
+                            <h3>Participated in 36 hours Sustainathon</h3>
+                            <p>Issued by: Kumaraguru Institutions & Hyperverge</p>
+                            <a href="https://drive.google.com/file/d/1v5-FWV5bt7oTdh3Wul7En06tPvR27Dx6/view?usp=drive_link"
+                                target="_blank" class="btn">View Certificate</a>
+                        </div>
+                    </div>
+
+                    <div class="certificate-card others">
+                        <img src="images/Fullstack.png" alt="Fullstack Certificate">
+                        <div class="card-content">
+                            <h3>Fullstack Development with React</h3>
+                            <p>Issued by: KSI in association with Rampex Technologies LLP</p>
+                            <a href="https://drive.google.com/file/d/10q75lZ8EK-Wu5_mxjeAW0pjGAy4EOppw/view?usp=drive_link"
+                                target="_blank" class="btn">View Certificate</a>
+                        </div>
+                    </div>
+
+                    <div class="certificate-card others">
+                        <img src="images/GIET.png" alt="SQL Certificate">
+                        <div class="card-content">
+                            <h3>Protosem - Graduation Innovation Engineer Trainee</h3>
+                            <p>Issued by: Forge Innovation and Ventures</p>
+                            <a href="https://drive.google.com/file/d/1tWtre_s_qXWnk-s-oofsMTPUTV113_q0/view?usp=drive_link"
+                                target="_blank" class="btn">View Certificate</a>
+                        </div>
+                    </div>
+
+                    <div class="certificate-card others">
                         <img src="images/nss.png" alt="Certificate">
                         <div class="card-content">
                             <h3>NSS Volunteer and attended 7 days special camp</h3>
@@ -299,6 +319,8 @@
                                 target="_blank" class="btn">View Certificate</a>
                         </div>
                     </div>
+                </div>
+            </div>
         </section>
 
         <!-- ---------------- contact ---------------- -->
@@ -398,6 +420,27 @@
                 });
             }
 
+        </script>
+        <script>
+            function filterCertificates(category) {
+                const cards = document.querySelectorAll('.certificate-card');
+                const buttons = document.querySelectorAll('.filter-btn-cert');
+
+                buttons.forEach(btn => btn.classList.remove('active-filter-cert'));
+
+                const activeBtn = Array.from(buttons).find(btn => btn.textContent.toLowerCase().includes(category));
+                if (activeBtn) activeBtn.classList.add('active-filter-cert');
+
+                cards.forEach(card => {
+                    if (category === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        card.classList.contains(category)
+                            ? card.style.display = 'block'
+                            : card.style.display = 'none';
+                    }
+                });
+            }
         </script>
     </div>
 </body>

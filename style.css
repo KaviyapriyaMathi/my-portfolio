@@ -114,14 +114,62 @@ nav ul li a:hover::after {
     display: flex;
     margin: 20px 0 40px;
 }
-
+/* 
+ */
 .tab-links {
     margin-right: 50px;
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
-    font-weight: 700;
+    font-weight: 1000;
     position: relative;
-    color: rgb(208, 216, 224);
+    color: transparent;
+    background: linear-gradient(90deg, #ffffff, #b4c6d9, #ffffff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: shimmer 1.5s infinite linear;
+    letter-spacing: 0.5px;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #51aaee;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.4s ease;
+}
+
+.tab-links.active-link::after {
+    width: 100%;
+}
+/* 
+ */
+
+
+
+/* 
+.tab-links {
+    margin-right: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 450;
+    position: relative;
+    color: #ffffff;
+    text-transform: none;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
 }
 
 .tab-links::after {
@@ -137,7 +185,7 @@ nav ul li a:hover::after {
 
 .tab-links.active-link::after {
     width: 70%;
-}
+} */
 
 .tab-contents ul li {
     list-style: none;
@@ -158,64 +206,64 @@ nav ul li a:hover::after {
 }
 
 .skills-overlay-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-  margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 20px;
 }
 
 .overlay-card {
-  position: relative;
-  background-color: #111;
-  border: 1px solid #222;
-  border-radius: 12px;
-  padding: 24px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    background-color: #111;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 24px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .overlay-card:hover {
-  transform: scale(1.02);
-  border-color: #51aaee;
+    transform: scale(1.02);
+    border-color: #51aaee;
 }
 
 .overlay-card::after {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: rgba(81,170,238,0.1);
-  transform: rotate(45deg) scale(0);
-  transition: transform 0.5s ease;
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(81, 170, 238, 0.1);
+    transform: rotate(45deg) scale(0);
+    transition: transform 0.5s ease;
 }
 
 .overlay-card:hover::after {
-  transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
 }
 
 .card-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
 }
 
 .card-icon {
-  font-size: 24px;
+    font-size: 24px;
 }
 
 .card-header h3 {
-  font-size: 20px;
-  color: #51aaee;
+    font-size: 20px;
+    color: #51aaee;
 }
 
 .card-body p {
-  font-size: 15px;
-  color: #ccc;
-  line-height: 1.5;
+    font-size: 15px;
+    color: #ccc;
+    line-height: 1.5;
 }
 
 
@@ -376,68 +424,34 @@ nav ul li a:hover::after {
 }
 
 /* Certificates Section */
-#certificates {
-    padding: 80px 0;
-    color: #fff;
-    text-align: center;
+.certificate-filters {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 40px;
+    gap: 40px;
 }
 
-.certificates-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-top: 40px;
-}
-
-.certificate-card {
-    background: #111;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.certificate-card:hover {
-    transform: translateY(-8px);
-    background: #1a1a1a;
-}
-
-.certificate-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.certificate-card .card-content {
-    padding: 20px;
-}
-
-.certificate-card h3 {
+.filter-btn-cert {
     font-size: 18px;
-    margin-bottom: 8px;
-    color: #70e976;
-    /* green highlight (same as your theme) */
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    color: rgb(208, 216, 224);
 }
 
-.certificate-card p {
-    font-size: 14px;
-    margin-bottom: 12px;
-    color: #aaa;
-}
-
-.certificate-card .btn {
-    display: inline-block;
-    padding: 8px 16px;
+.filter-btn-cert::after {
+    content: '';
+    width: 0;
+    height: 3px;
     background: #51aaee;
-    color: #fff;
-    border-radius: 20px;
-    font-size: 14px;
-    text-decoration: none;
-    transition: background 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
 }
 
-.certificate-card .btn:hover {
-    background: #51aaee;
+.filter-btn-cert.active-filter-cert::after {
+    width: 100%;
 }
 
 /* Contact Section */
@@ -529,4 +543,63 @@ footer {
 footer p {
     margin: 0;
     font-size: 14px;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+}
+
+.certificate-card {
+    background: #111;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #1f1f1f;
+    transition: transform 0.3s ease, background 0.3s ease;
+    display: block;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    background: #1a1a1a;
+}
+
+.certificate-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    font-size: 20px;
+    color: #70e976;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.card-content a.btn {
+    font-size: 14px;
+    color: #51aaee;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.card-content a.btn:hover {
+    color: #70e976;
+}
+
+#certificates h1 {
+    text-align: center;
 }
